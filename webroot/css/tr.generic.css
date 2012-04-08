@@ -1,0 +1,78 @@
+#header h1 {
+	float: left;
+	background-color: transparent;
+}
+#header h1 a {
+	background-color: transparent;
+}
+#header {
+	background-color: #069;
+	overflow: auto;
+}
+#header .actions {
+	padding: 0 1.5%;
+	width: 400px;
+}
+#header .actions ul li {
+	display: inline;
+}
+#header .actions ul li a {
+	display: inline;
+	clear: none;
+}
+
+body {
+	/* overflow: auto; */
+	background-color: gray;
+}
+#content {
+	/* overflow: visible; */
+}
+label {
+	display: inline;
+	width: 20%;
+	float: left;
+}
+input, textarea {
+	width: 76%;
+	clear: none;
+}
+form div.submit {
+	clear: none;
+	display: inline;
+}
+.chzn-container {
+        padding: 0 1em 0 0;
+}
+
+/* View page: top */
+.index h2, .view h2 {
+	display: inline;
+	float: left;
+}
+#tr_indexview_actions {
+	line-height: 190%;
+	margin: .3em 0 3em 9em;
+	clear: right;
+}
+#tr_indexview_actions .actions {
+	width: auto;
+	padding: 0 1.5%;
+}
+#tr_indexview_actions .actions ul li {
+	display: inline;
+}
+#tr_indexview_actions .actions ul li a {
+	display: inline;
+}
+#tr_indexview_filter {
+	display: none;
+	background-color: #eee;
+}
+
+/* Auth */
+#tr_header_auth {
+	float: right;
+	padding-right: 10px;
+}
+

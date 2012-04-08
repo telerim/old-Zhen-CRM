@@ -1,0 +1,16 @@
+2012-04-05 11:27:46 Notice: Notice (8): Undefined offset: 1 in [/var/www/html/cake/crm/Plugin/Usermgmt/Model/User.php, line 257]
+Trace:
+User::authsomeLogin() - APP/Plugin/Usermgmt/Model/User.php, line 257
+UserAuthComponent::login() - APP/Plugin/Usermgmt/Controller/Component/UserAuthComponent.php, line 150
+UserAuthComponent::__useCookieToken() - APP/Plugin/Usermgmt/Controller/Component/UserAuthComponent.php, line 240
+UserAuthComponent::__getActiveUser() - APP/Plugin/Usermgmt/Controller/Component/UserAuthComponent.php, line 200
+UserAuthComponent::beforeFilter() - APP/Plugin/Usermgmt/Controller/Component/UserAuthComponent.php, line 53
+AppController::beforeFilter() - APP/Controller/AppController.php, line 40
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - APP/Cake/Event/CakeEventManager.php, line 246
+Controller::startupProcess() - APP/Cake/Controller/Controller.php, line 670
+Dispatcher::_invoke() - APP/Cake/Routing/Dispatcher.php, line 100
+Dispatcher::dispatch() - APP/Cake/Routing/Dispatcher.php, line 85
+[main] - APP/webroot/index.php, line 101
+
+2012-04-05 12:27:46 Debug: permission: actionUrl-contacts/index

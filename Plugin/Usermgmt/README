@@ -1,0 +1,84 @@
+This is a fork of the original UserMgmt CakePHP plugin with the following changes:
+- /dashboard changed to /user_dashboard
+- "first_name" and "last_name" fields merged into "name" field, to make it easier for models associated with "users" table and for CakePHP's displayField auto-magic to work.
+
+====================
+
+UserMgmt is a User Management Plugin for cakephp 2.0 or 2.1
+Plugin version 1.0 (Stable)
+
+Hey wanna Demo ??? http://usermgmt.ektasoftwares.com/
+Main Features-
+1. Clean code with formatting
+2. Login
+3. Registration
+4. Cookie login/ Remember me functionality
+5. Add/Edit/Delete User By Admin
+6. Add/Edit/Delete Group By Admin
+7. Change Password
+8. Forgot Password
+9. Change User Password by Admin
+10. List of all Users
+11. List of all Groups
+12. Manage site Permissions using Ajax updation, Permission caching functionality for fast checking
+13. User's Email Verification
+14. User Profile View
+15. User activation by Admin
+16. Routing long urls to small urls
+
+
+It's based on jedt/SparkPlug plugin
+
+INSTALLATION
+------------
+
+1. Download the latest version or use git to keep the plugin up to date
+	https://github.com/chetanvarshney/User-Management-Plugin-for-Cakephp-2.x
+	go to yourapp/app/Plugin
+	extract here
+	name it Usermgmt
+
+2. Schema import (use your favorite sql tool to import the schema)
+
+	yourapp/app/Plugin/Usermgmt/Config/Schema/usermgmt.sql
+
+3. Configure your AppController class
+
+        Your yourapp/app/Controller/AppController.php should look like this:
+
+<?php
+	class AppController extends Controller 
+	{
+		var $helpers = array('Form', 'Html', 'Session', 'Js', 'Usermgmt.UserAuth');
+		public $components = array('Session','RequestHandler', 'Usermgmt.UserAuth');
+		function beforeFilter(){
+			$this->userAuth();
+		}
+		private function userAuth(){
+			$this->UserAuth->beforeFilter($this);
+		}
+	}
+?>
+
+4. Enable Plugin in your bootstrap.php
+
+        yourapp/app/Config/bootstrap.php should include this line
+
+        // load Usermgmt plugin and apply plugin routes. Keep all the other plugins you are using here
+        CakePlugin::loadAll(array(
+            'Usermgmt' => array('routes' => true, 'bootstrap' => true),
+        ));
+
+5. Add plugin css in your layout file
+    for example yourapp/app/View/Layouts/default.ctp
+    echo $this->Html->css('/usermgmt/css/umstyle');
+
+6. Adjust plugin configuration
+
+    Change /app/Plugin/Usermgmt/Config/bootstrap.php (parameters are explained there) to suit your needs.
+
+7. Default user name password 
+username- admin
+password- 123456
+
+ALL DONE !
