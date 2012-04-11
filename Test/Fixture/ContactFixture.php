@@ -46,8 +46,8 @@ class ContactFixture extends CakeTestFixture {
 			'phone' => 'Lorem ipsum dolor sit amet',
 			'email' => 'Lorem ipsum dolor sit amet',
 			'user_id' => 1,
-			'created' => '2012-04-05 11:24:57',
-			'updated' => '2012-04-05 11:24:57'
+			'created' => '2012-04-11 14:30:35',
+			'updated' => '2012-04-11 14:30:35'
 		),
 	);
 }

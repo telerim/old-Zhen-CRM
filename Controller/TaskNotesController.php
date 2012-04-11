@@ -8,17 +8,13 @@ App::uses('AppController', 'Controller');
 class TaskNotesController extends AppController {
 
 
-    var $filters = array  
-        (  
-            'index' => array  
-            (  
-                'TaskNote' => array  
-                (
+    var $filters = array (  
+            'index' => array (  
+                'TaskNote' => array (
                     'TaskNote.name',  
-                    'TaskNote.description'  
                 )  
             )  
-        );  
+    );  
 
 /**
  * index method

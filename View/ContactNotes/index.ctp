@@ -13,7 +13,23 @@
 <div id="tr_indexview_filter">
 		<?php echo $this->Filter->filterForm('Contact Note', array('legend' => 'Search')); ?>
 </div>
-	<table cellpadding="0" cellspacing="0">
+
+<?php
+        $filterString = '';
+        foreach ($this->viewVars['viewFilterParams'] as $filter2) {
+                if (!isset($filter2['options']['value'])) continue;
+                $value = $filter2['options']['value'];
+                $name = $filter2['name'];
+                if (!($filterString === '')) $filterString .= ', ';
+                $filterString .= "<b>$value</b> " . __('in') .
+                        " <i>$name</i>";
+        }
+        if (!($filterString === '')) {
+		echo '<div id="tr_filterinfo">';
+                echo __('Filtered by') . ': ' . $filterString;
+		echo '</div>';
+	}
+?>	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
 			<th><?php echo $this->Paginator->sort('contact_id');?></th>

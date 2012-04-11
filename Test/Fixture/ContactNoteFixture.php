@@ -33,9 +33,9 @@ class ContactNoteFixture extends CakeTestFixture {
 			'contact_id' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
 			'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-			'time' => '2012-04-05 11:24:57',
-			'created' => '2012-04-05 11:24:57',
-			'updated' => '2012-04-05 11:24:57'
+			'time' => '2012-04-11 14:30:34',
+			'created' => '2012-04-11 14:30:34',
+			'updated' => '2012-04-11 14:30:34'
 		),
 	);
 }

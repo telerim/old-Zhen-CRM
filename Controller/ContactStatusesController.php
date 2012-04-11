@@ -8,17 +8,13 @@ App::uses('AppController', 'Controller');
 class ContactStatusesController extends AppController {
 
 
-    var $filters = array  
-        (  
-            'index' => array  
-            (  
-                'ContactStatus' => array  
-                (
+    var $filters = array (  
+            'index' => array (  
+                'ContactStatus' => array (
                     'ContactStatus.name',  
-                    'ContactStatus.description'  
                 )  
             )  
-        );  
+    );  
 
 /**
  * index method

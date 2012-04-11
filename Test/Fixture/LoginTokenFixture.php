@@ -34,8 +34,8 @@ class LoginTokenFixture extends CakeTestFixture {
 			'token' => 'Lorem ipsum dolor sit amet',
 			'duration' => 'Lorem ipsum dolor sit amet',
 			'used' => 1,
-			'created' => '2012-04-05 11:25:00',
-			'expires' => '2012-04-05 11:25:00'
+			'created' => '2012-04-11 14:30:37',
+			'expires' => '2012-04-11 14:30:37'
 		),
 	);
 }

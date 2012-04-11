@@ -33,13 +33,13 @@ class DealFixture extends CakeTestFixture {
 		array(
 			'id' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
-			'time' => '2012-04-05 11:24:58',
+			'time' => '2012-04-11 14:30:36',
 			'contact_id' => 1,
 			'user_id' => 1,
 			'deal_status_id' => 1,
 			'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-			'created' => '2012-04-05 11:24:58',
-			'updated' => '2012-04-05 11:24:58'
+			'created' => '2012-04-11 14:30:36',
+			'updated' => '2012-04-11 14:30:36'
 		),
 	);
 }

@@ -37,13 +37,13 @@ class EventFixture extends CakeTestFixture {
 			'event_type_id' => 1,
 			'title' => 'Lorem ipsum dolor sit amet',
 			'details' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-			'start' => '2012-04-05 11:24:59',
-			'end' => '2012-04-05 11:24:59',
+			'start' => '2012-04-11 14:30:36',
+			'end' => '2012-04-11 14:30:36',
 			'all_day' => 1,
 			'status' => 'Lorem ipsum dolor ',
 			'active' => 1,
-			'created' => '2012-04-05',
-			'modified' => '2012-04-05'
+			'created' => '2012-04-11',
+			'modified' => '2012-04-11'
 		),
 	);
 }

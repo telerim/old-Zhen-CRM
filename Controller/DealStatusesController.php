@@ -8,17 +8,13 @@ App::uses('AppController', 'Controller');
 class DealStatusesController extends AppController {
 
 
-    var $filters = array  
-        (  
-            'index' => array  
-            (  
-                'DealStatus' => array  
-                (
+    var $filters = array (  
+            'index' => array (  
+                'DealStatus' => array (
                     'DealStatus.name',  
-                    'DealStatus.description'  
                 )  
             )  
-        );  
+    );  
 
 /**
  * index method

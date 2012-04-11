@@ -8,17 +8,13 @@ App::uses('AppController', 'Controller');
 class EventsController extends AppController {
 
 
-    var $filters = array  
-        (  
-            'index' => array  
-            (  
-                'Event' => array  
-                (
+    var $filters = array (  
+            'index' => array (  
+                'Event' => array (
                     'Event.name',  
-                    'Event.description'  
                 )  
             )  
-        );  
+    );  
 
 /**
  * index method

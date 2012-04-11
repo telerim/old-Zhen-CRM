@@ -28,8 +28,8 @@ class ContactStatusFixture extends CakeTestFixture {
 		array(
 			'id' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
-			'created' => '2012-04-05 11:24:57',
-			'updated' => '2012-04-05 11:24:57'
+			'created' => '2012-04-11 14:30:35',
+			'updated' => '2012-04-11 14:30:35'
 		),
 	);
 }

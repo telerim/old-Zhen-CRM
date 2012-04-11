@@ -32,8 +32,8 @@ class UserGroupFixture extends CakeTestFixture {
 			'name' => 'Lorem ipsum dolor sit amet',
 			'alias_name' => 'Lorem ipsum dolor sit amet',
 			'allowRegistration' => 1,
-			'created' => '2012-04-05 11:25:01',
-			'modified' => '2012-04-05 11:25:01'
+			'created' => '2012-04-11 14:30:38',
+			'modified' => '2012-04-11 14:30:38'
 		),
 	);
 }

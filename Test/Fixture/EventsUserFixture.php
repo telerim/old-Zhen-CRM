@@ -30,8 +30,8 @@ class EventsUserFixture extends CakeTestFixture {
 			'id' => 1,
 			'event_id' => 1,
 			'user_id' => 1,
-			'created' => '2012-04-05 11:25:00',
-			'updated' => '2012-04-05 11:25:00'
+			'created' => '2012-04-11 14:30:37',
+			'updated' => '2012-04-11 14:30:37'
 		),
 	);
 }

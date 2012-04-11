@@ -65,9 +65,14 @@ form div.submit {
 #tr_indexview_actions .actions ul li a {
 	display: inline;
 }
+
+/* Filter */
 #tr_indexview_filter {
 	display: none;
 	background-color: #eee;
+}
+#tr_filterinfo {
+	margin-top:5px; background-color:#ddd; padding:12px;
 }
 
 /* Auth */
@@ -75,4 +80,3 @@ form div.submit {
 	float: right;
 	padding-right: 10px;
 }
-

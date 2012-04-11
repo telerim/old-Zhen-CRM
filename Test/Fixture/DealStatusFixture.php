@@ -28,8 +28,8 @@ class DealStatusFixture extends CakeTestFixture {
 		array(
 			'id' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
-			'created' => '2012-04-05 11:24:58',
-			'updated' => '2012-04-05 11:24:58'
+			'created' => '2012-04-11 14:30:36',
+			'updated' => '2012-04-11 14:30:36'
 		),
 	);
 }

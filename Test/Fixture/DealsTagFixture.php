@@ -30,8 +30,8 @@ class DealsTagFixture extends CakeTestFixture {
 			'id' => 1,
 			'deal_id' => 1,
 			'tag_id' => 1,
-			'created' => '2012-04-05 11:24:59',
-			'updated' => '2012-04-05 11:24:59'
+			'created' => '2012-04-11 14:30:36',
+			'updated' => '2012-04-11 14:30:36'
 		),
 	);
 }

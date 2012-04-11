@@ -38,8 +38,8 @@ class UserFixture extends CakeTestFixture {
 			'email' => 'Lorem ipsum dolor sit amet',
 			'name' => 'Lorem ipsum dolor sit amet',
 			'active' => 'L',
-			'created' => '2012-04-05 11:25:02',
-			'modified' => '2012-04-05 11:25:02'
+			'created' => '2012-04-11 14:30:38',
+			'modified' => '2012-04-11 14:30:38'
 		),
 	);
 }

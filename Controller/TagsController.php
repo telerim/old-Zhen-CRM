@@ -8,17 +8,13 @@ App::uses('AppController', 'Controller');
 class TagsController extends AppController {
 
 
-    var $filters = array  
-        (  
-            'index' => array  
-            (  
-                'Tag' => array  
-                (
+    var $filters = array (  
+            'index' => array (  
+                'Tag' => array (
                     'Tag.name',  
-                    'Tag.description'  
                 )  
             )  
-        );  
+    );  
 
 /**
  * index method

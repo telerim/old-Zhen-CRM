@@ -65,6 +65,7 @@ Cache::config('default', array('engine' => 'File'));
  */
 CakePlugin::loadAll(array(
 	'Usermgmt' => array('routes' => true, 'bootstrap' => true),
+	'ReportManager' => array('bootstrap' => true)
 ));
 
 require_once (ROOT . DS . APP_DIR . DS . "Config/config.php");

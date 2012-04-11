@@ -30,8 +30,8 @@ class ContactsTagFixture extends CakeTestFixture {
 			'id' => 1,
 			'contact_id' => 1,
 			'tag_id' => 1,
-			'created' => '2012-04-05 11:24:58',
-			'updated' => '2012-04-05 11:24:58'
+			'created' => '2012-04-11 14:30:35',
+			'updated' => '2012-04-11 14:30:35'
 		),
 	);
 }
