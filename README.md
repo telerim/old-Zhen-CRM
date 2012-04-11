@@ -1,6 +1,6 @@
 A simple CRM system built on CakePHP 2.1.1
 
-INSTALL 
+## INSTALL 
 
 1. Checkout this project using Git, or download and unzip the ZIP file from GitHub.
 2. Move the files to a folder under WWW root
@@ -16,7 +16,7 @@ mysql -u USER -p DBNAME < Config/Schema/crm.sql
 cp Config/database.php.sample Config/database.php
 ```
 
-LICENSE
+## LICENSE
 
 Dual-licensed under GNU Affero General Public License.
 
