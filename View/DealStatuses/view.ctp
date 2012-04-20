@@ -61,7 +61,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Deal'), array('controller' => 'deals', 'action' => 'add'));?> </li>
+			<li><?php echo $this->Html->link(__('New Deal'), '/deals/add/dealStatus:' . $dealStatus['DealStatus']['id']);?> </li>
 		</ul>
 	</div>
 </div>

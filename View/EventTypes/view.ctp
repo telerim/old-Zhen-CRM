@@ -64,7 +64,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Event'), array('controller' => 'events', 'action' => 'add'));?> </li>
+			<li><?php echo $this->Html->link(__('New Event'), '/events/add/eventType:' . $eventType['EventType']['id']);?> </li>
 		</ul>
 	</div>
 </div>

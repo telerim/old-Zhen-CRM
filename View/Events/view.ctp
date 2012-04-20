@@ -96,7 +96,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Task Note'), array('controller' => 'task_notes', 'action' => 'add'));?> </li>
+			<li><?php echo $this->Html->link(__('New Task Note'), '/task_notes/add/event:' . $event['Event']['id']);?> </li>
 		</ul>
 	</div>
 </div>
@@ -126,7 +126,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Tag'), array('controller' => 'tags', 'action' => 'add'));?> </li>
+			<li><?php echo $this->Html->link(__('New Tag'), '/tags/add/event:' . $event['Event']['id']);?> </li>
 		</ul>
 	</div>
 </div>
@@ -164,7 +164,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add'));?> </li>
+			<li><?php echo $this->Html->link(__('New User'), '/users/add/event:' . $event['Event']['id']);?> </li>
 		</ul>
 	</div>
 </div>

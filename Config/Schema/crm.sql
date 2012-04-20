@@ -174,10 +174,10 @@ INSERT INTO `user_group_permissions` (`id`, `user_group_id`, `controller`, `acti
 (69, 3, 'Users', 'forgotPassword', 1);
 CREATE TABLE IF NOT EXISTS `contact_notes` (
   	`id` int(11) unsigned NOT NULL auto_increment,
-	`contact_id` INT NOT NULL,
+	`contact_id` INT  NULL,
 	`name` varchar(100) NOT NULL,
-	`description` TEXT NOT NULL,
-	`time` DATETIME NOT NULL,
+	`description` TEXT NULL,
+	`time` DATETIME  NULL,
 	`created` DATETIME NOT NULL,
         `updated` DATETIME NOT NULL, 
         PRIMARY KEY  (`id`)
@@ -192,33 +192,33 @@ CREATE TABLE IF NOT EXISTS `contact_statuses` (
 CREATE TABLE IF NOT EXISTS `contacts` (
   	`id` int(11) unsigned NOT NULL auto_increment,
 	`name` varchar(100) NOT NULL,
-	`company_name` varchar(100) NOT NULL,
-	`contact_status_id` INT NOT NULL,
-	`address1` varchar(100) NOT NULL,
-	`address2` varchar(100) NOT NULL,
-	`city` varchar(100) NOT NULL,
-	`state` varchar(100) NOT NULL,
-	`phone` varchar(100) NOT NULL,
-	`email` varchar(100) NOT NULL,
-	`user_id` INT NOT NULL,
+	`company_name` varchar(100)  NULL,
+	`contact_status_id` INT  NULL,
+	`address1` varchar(100)  NULL,
+	`address2` varchar(100)  NULL,
+	`city` varchar(100)  NULL,
+	`state` varchar(100)  NULL,
+	`phone` varchar(100)  NULL,
+	`email` varchar(100)  NULL,
+	`user_id` INT  NULL,
 	`created` DATETIME NOT NULL,
         `updated` DATETIME NOT NULL, 
         PRIMARY KEY  (`id`)
 );
 CREATE TABLE IF NOT EXISTS `contacts_tags` (
   	`id` int(11) unsigned NOT NULL auto_increment,
-	`contact_id` INT NOT NULL,
-	`tag_id` INT NOT NULL,
+	`contact_id` INT  NULL,
+	`tag_id` INT  NULL,
 	`created` DATETIME NOT NULL,
         `updated` DATETIME NOT NULL, 
         PRIMARY KEY  (`id`)
 );
 CREATE TABLE IF NOT EXISTS `deal_notes` (
   	`id` int(11) unsigned NOT NULL auto_increment,
-	`deal_id` INT NOT NULL,
+	`deal_id` INT  NULL,
 	`name` varchar(100) NOT NULL,
-	`description` TEXT NOT NULL,
-	`time` DATETIME NOT NULL,
+	`description` TEXT NULL,
+	`time` DATETIME  NULL,
 	`created` DATETIME NOT NULL,
         `updated` DATETIME NOT NULL, 
         PRIMARY KEY  (`id`)
@@ -233,35 +233,35 @@ CREATE TABLE IF NOT EXISTS `deal_statuses` (
 CREATE TABLE IF NOT EXISTS `deals` (
   	`id` int(11) unsigned NOT NULL auto_increment,
 	`name` varchar(100) NOT NULL,
-	`time` DATETIME NOT NULL,
-	`contact_id` INT NOT NULL,
-	`user_id` INT NOT NULL,
-	`deal_status_id` INT NOT NULL,
-	`description` TEXT NOT NULL,
+	`time` DATETIME  NULL,
+	`contact_id` INT  NULL,
+	`user_id` INT  NULL,
+	`deal_status_id` INT  NULL,
+	`description` TEXT NULL,
 	`created` DATETIME NOT NULL,
         `updated` DATETIME NOT NULL, 
         PRIMARY KEY  (`id`)
 );
 CREATE TABLE IF NOT EXISTS `deals_tags` (
   	`id` int(11) unsigned NOT NULL auto_increment,
-	`deal_id` INT NOT NULL,
-	`tag_id` INT NOT NULL,
+	`deal_id` INT  NULL,
+	`tag_id` INT  NULL,
 	`created` DATETIME NOT NULL,
         `updated` DATETIME NOT NULL, 
         PRIMARY KEY  (`id`)
 );
 CREATE TABLE IF NOT EXISTS `events_tags` (
   	`id` int(11) unsigned NOT NULL auto_increment,
-	`event_id` INT NOT NULL,
-	`tag_id` INT NOT NULL,
+	`event_id` INT  NULL,
+	`tag_id` INT  NULL,
 	`created` DATETIME NOT NULL,
         `updated` DATETIME NOT NULL, 
         PRIMARY KEY  (`id`)
 );
 CREATE TABLE IF NOT EXISTS `events_users` (
   	`id` int(11) unsigned NOT NULL auto_increment,
-	`event_id` INT NOT NULL,
-	`user_id` INT NOT NULL,
+	`event_id` INT  NULL,
+	`user_id` INT  NULL,
 	`created` DATETIME NOT NULL,
         `updated` DATETIME NOT NULL, 
         PRIMARY KEY  (`id`)
@@ -275,10 +275,10 @@ CREATE TABLE IF NOT EXISTS `tags` (
 );
 CREATE TABLE IF NOT EXISTS `task_notes` (
   	`id` int(11) unsigned NOT NULL auto_increment,
-	`event_id` INT NOT NULL,
+	`event_id` INT  NULL,
 	`name` varchar(100) NOT NULL,
-	`description` TEXT NOT NULL,
-	`time` DATETIME NOT NULL,
+	`description` TEXT NULL,
+	`time` DATETIME  NULL,
 	`created` DATETIME NOT NULL,
         `updated` DATETIME NOT NULL, 
         PRIMARY KEY  (`id`)

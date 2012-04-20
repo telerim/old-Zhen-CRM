@@ -38,19 +38,6 @@ class DealNotesController extends AppController {
 			throw new NotFoundException(__('Invalid deal note'));
 		}
 		$this->set('dealNote', $this->DealNote->read(null, $id));
-		/* If users are in array, then add this ownership check */
-		if (in_array("'users'", $compact)) {
-		echo "/* TR: Authorization */
-                \$currentUser = \$this->UserAuth->getUser();
-                \$currentUserId = \$currentUser['User']['id'];
-                \$ownerId = \$this->request->data['$currentModelName']['user_id'];
-                \$isOwner = (\$currentUserId == \$ownerId);
-                \$isAdmin = (\$currentUser['UserGroup']['id'] == 1);
-                if (!(\$isOwner || \$isAdmin)) {
-                        \$this->Session->setFlash(__('You do not have the permissions to edit this $currentModelName. Please ask the owner.'));
-                        \$this->redirect(array('action' => 'index'));
-                }";
-		}
 	}
 
 /**
@@ -67,6 +54,10 @@ class DealNotesController extends AppController {
 			} else {
 				$this->Session->setFlash(__('The deal note could not be saved. Please, try again.'));
 			}
+		}
+		$trparams = $this->params['named'];
+		foreach ($trparams as $model=>$id) {
+		        $this->request->data['DealNote'][$model . '_id'] = $id;
 		}
 		$deals = $this->DealNote->Deal->find('list');
 		$this->set(compact('deals'));

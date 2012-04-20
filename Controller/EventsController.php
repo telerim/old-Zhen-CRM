@@ -38,19 +38,6 @@ class EventsController extends AppController {
 			throw new NotFoundException(__('Invalid event'));
 		}
 		$this->set('event', $this->Event->read(null, $id));
-		/* If users are in array, then add this ownership check */
-		if (in_array("'users'", $compact)) {
-		echo "/* TR: Authorization */
-                \$currentUser = \$this->UserAuth->getUser();
-                \$currentUserId = \$currentUser['User']['id'];
-                \$ownerId = \$this->request->data['$currentModelName']['user_id'];
-                \$isOwner = (\$currentUserId == \$ownerId);
-                \$isAdmin = (\$currentUser['UserGroup']['id'] == 1);
-                if (!(\$isOwner || \$isAdmin)) {
-                        \$this->Session->setFlash(__('You do not have the permissions to edit this $currentModelName. Please ask the owner.'));
-                        \$this->redirect(array('action' => 'index'));
-                }";
-		}
 	}
 
 /**
@@ -67,6 +54,10 @@ class EventsController extends AppController {
 			} else {
 				$this->Session->setFlash(__('The event could not be saved. Please, try again.'));
 			}
+		}
+		$trparams = $this->params['named'];
+		foreach ($trparams as $model=>$id) {
+		        $this->request->data['Event'][$model . '_id'] = $id;
 		}
 		$eventTypes = $this->Event->EventType->find('list');
 		$tags = $this->Event->Tag->find('list');

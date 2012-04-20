@@ -86,7 +86,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Deal Note'), array('controller' => 'deal_notes', 'action' => 'add'));?> </li>
+			<li><?php echo $this->Html->link(__('New Deal Note'), '/deal_notes/add/deal:' . $deal['Deal']['id']);?> </li>
 		</ul>
 	</div>
 </div>
@@ -116,7 +116,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Tag'), array('controller' => 'tags', 'action' => 'add'));?> </li>
+			<li><?php echo $this->Html->link(__('New Tag'), '/tags/add/deal:' . $deal['Deal']['id']);?> </li>
 		</ul>
 	</div>
 </div>

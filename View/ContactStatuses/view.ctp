@@ -71,7 +71,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Contact'), array('controller' => 'contacts', 'action' => 'add'));?> </li>
+			<li><?php echo $this->Html->link(__('New Contact'), '/contacts/add/contactStatus:' . $contactStatus['ContactStatus']['id']);?> </li>
 		</ul>
 	</div>
 </div>
