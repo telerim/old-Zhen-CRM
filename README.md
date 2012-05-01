@@ -20,8 +20,10 @@ cp Config/database.php.sample Config/database.php
 
 6. Login to your Zhen CRM install using:
 
+```
 Username: admin
 Password: password
+```
 
 Make sure to change your password upon first login!
 
