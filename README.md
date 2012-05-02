@@ -27,7 +27,7 @@ vi Config/config.php
 
 ```
 Username: admin
-Password: password
+Password: 123456 
 ```
 
 Make sure to change your password upon first login!
