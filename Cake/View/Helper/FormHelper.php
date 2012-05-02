@@ -991,9 +991,8 @@ class FormHelper extends AppHelper {
                                 $varField = Inflector::tableize(Inflector::pluralize(preg_replace('/_id$/', '', $fieldKey)));
                                 $varName = Inflector::humanize(Inflector::singularize(preg_replace('/_id$/', '', $fieldKey)));
 				$optPlugin = "";
-				if ($varname === "User") 
+				if ($varName === "User") 
 					$optPlugin = "Usermgmt";
-				$optPlugin = 
                                 $options['after'] = $this->Html->link(
                                         __('New') . " " . $varName,
                                         array('controller' => $varField,
