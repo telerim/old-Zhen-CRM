@@ -16,7 +16,12 @@ mysql -u USER -p DBNAME < Config/Schema/crm.sql
 cp Config/database.php.sample Config/database.php
 ```
 
-5. Edit Config/config.php to edit Zhen CRM settings, such as copyright, company name, etc.
+5. Copy Config/config.php.sample to Config/config.php, and then edit Zhen CRM settings, such as copyright, company name, etc.
+
+```
+cp Config/config.php.sample Config/config.php
+vi Config/config.php
+```
 
 6. Login to your Zhen CRM install using:
 
