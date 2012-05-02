@@ -990,14 +990,16 @@ class FormHelper extends AppHelper {
                                 // Adds a "New" link to every related select
                                 $varField = Inflector::tableize(Inflector::pluralize(preg_replace('/_id$/', '', $fieldKey)));
                                 $varName = Inflector::humanize(Inflector::singularize(preg_replace('/_id$/', '', $fieldKey)));
-				$optPlugin = "";
-				if ($varName === "User") 
-					$optPlugin = "Usermgmt";
+                                if ($varName === "User") {
+                                        $nLink = "/addUser";
+                                } else {
+                                        $nLink = array(
+                                                'controller' => $varField,
+                                                'action' => 'add');
+                                }
                                 $options['after'] = $this->Html->link(
                                         __('New') . " " . $varName,
-                                        array('controller' => $varField,
-                                                'action' => 'add',
-						'plugin' => $optPlugin),
+                                        $nLink,
                                         array('target' => '_blank')
                                 );
                                 /* CRM core hack - end */
