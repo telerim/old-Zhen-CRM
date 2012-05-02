@@ -21,8 +21,10 @@
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo __($Tr['SiteTitle']) . ':'; ?>
-		<?php echo $title_for_layout; ?>
+		<?php
+        if (isset($Tr['SiteTitle'])) { echo __($Tr['SiteTitle']) . ':'; }
+        echo $title_for_layout;
+        ?>
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
@@ -41,8 +43,8 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link(__($Tr['SiteTitle']), '/'); ?></h1>
-                        <?php  if ($authUser) { ?>
+			<h1><?php echo (isset($Tr['SiteTitle'])) ? $this->Html->link(__($Tr['SiteTitle']), '/') : $this->Html->link(__('Home'), '/'); ?></h1>
+                        <?php  if (isset($authUser)) { ?>
                                 <?php echo $this->element('tr_header'); ?>
                                 <div id="tr_header_auth">Logged in as: <b><?php echo $authUser['User']['name'] ?></b> 
 				| <?php echo $this->Html->link(__("Profile",true), '/viewUser/' . $authUser['User']['id']) ?>
@@ -58,7 +60,7 @@
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
-			Copyright (c) <?php echo $Tr['StartYear'] ?>-2012 <?php echo $Tr['Copyright'] ?> | 
+			<?php if (isset($Tr) && is_array($Tr)) { ?>Copyright (c) <?php echo $Tr['StartYear'] ?>-2012 <?php echo $Tr['Copyright']; } ?> |
 			Powered by <a href="#">Zhen CRM</a> | 
 			<?php echo $this->Html->link(
 					$this->Html->image('cake.power.gif', array('alt' => __('CakePHP: the rapid development php framework'), 'border' => '0')),
