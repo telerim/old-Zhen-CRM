@@ -53,7 +53,13 @@
 		<td><?php echo $this->Html->link(h($contact['Contact']['name']), array('action' => 'view', $contact['Contact']['id'])); ?>&nbsp;</td>
 		<td><?php echo $this->Html->link(h($contact['Contact']['company_name']), array('action' => 'view', $contact['Contact']['id'])); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($this->Html->image("statuses/contact/" . strtolower($contact['ContactStatus']['name']) . ".png", array('alt'=>$contact['ContactStatus']['name'])), array('controller' => 'contact_statuses', 'action' => 'view', $contact['ContactStatus']['id']), array('escape' => false)); ?>
+			<?php
+            if(is_readable(APP . WEBROOT_DIR . DS . 'img' . DS . 'statuses' . DS . 'contact' . DS . strtolower($contact['ContactStatus']['name'] . '.png'))) {
+                echo $this->Html->link($this->Html->image("statuses/contact/" . strtolower($contact['ContactStatus']['name']) . ".png", array('alt'=>$contact['ContactStatus']['name'])), array('controller' => 'contact_statuses', 'action' => 'view', $contact['ContactStatus']['id']), array('escape' => false));
+            } else {
+                echo $this->Html->link($contact['ContactStatus']['name'], array('controller' => 'contact_statuses', 'action' => 'view', $contact['ContactStatus']['id']));
+            }
+            ?>&nbsp;
 		</td>
 		<td><?php echo h($contact['Contact']['address1']); ?>&nbsp;</td>
 		<td><?php echo h($contact['Contact']['address2']); ?>&nbsp;</td>
