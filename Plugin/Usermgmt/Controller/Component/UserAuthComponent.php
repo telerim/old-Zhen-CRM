@@ -50,6 +50,7 @@ class UserAuthComponent extends Component {
 	 * @return void
 	 */
 	function beforeFilter(&$c) {
+		$this->Cookie->httpOnly = true;
 		$user = $this->__getActiveUser();
 		UsermgmtInIt($this);
 		$pageRedirect = $c->Session->read('permission_error_redirect');
