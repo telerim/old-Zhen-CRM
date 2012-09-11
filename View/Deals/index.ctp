@@ -46,7 +46,7 @@
 	foreach ($deals as $deal): ?>
 	<tr>
 		<td><?php echo h($deal['Deal']['id']); ?>&nbsp;</td>
-		<td><?php echo $this->Html->link(h($deal['Deal']['name']), array('action' => 'view', $deal['Deal']['id'])); ?>&nbsp;</td>
+		<td><?php echo $this->Html->link(h($deal['Deal']['name']), array('action' => 'view', $deal['Deal']['id']), array('escape' => false)); ?>&nbsp;</td>
 		<td><?php echo $this->Time->nice(h($deal['Deal']['time'])); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($deal['Contact']['name'], array('controller' => 'contacts', 'action' => 'view', $deal['Contact']['id'])); ?>
